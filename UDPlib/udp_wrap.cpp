@@ -1,21 +1,28 @@
+/*
+   
+   udp_wrap.cpp
+   Simple Two Way UDP Communication Implementation
+
+   Author: Omar Medjaouri
+   Last Updated: July 7th, 2014
+
+   Please refer to udp_wrap.h for instructions on how to use
+   the library.
+
+*/
+
+
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <sys/wait.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <errno.h>
 #include <unistd.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <signal.h>
-#include <iostream>
-#include "strings.h"
-#include "string.h"
-
-#define MAX_RECV_LENGTH 512
-#define MAX_SEND_LENGTH 512
-#define MAX_BUFFER_LENGTH 4086
-#define MAX_MESSAGES 12
+#include <stdlib.h>
+#include <strings.h>
+#include <stdio.h>
+#include "udp_wrap.h"
 
 struct sockaddr_in server_addr, client_addr;
 int sock;
